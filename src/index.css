@@ -5,9 +5,258 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   font-size: 0.8em;
+   font-family: Kumbh Sans;
+}
+  
+
+*{
+  padding: 0;
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  width: 70vw;
+  min-height: max-content;
+  height: 400px;
+  min-height: max-content;
+  background-color: white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  gap: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-image: url('./images/bg-pattern-desktop.svg');
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position-x: -450px;
+  background-position-y: 60%;
+  overflow: hidden;
+}
+
+/* STYLING OF IMAGES */
+.imgSection{
+  position: relative;
+  padding: 10px;
+}
+
+.bg{
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  transform: translate(22%, 70%);
+  width: 100%;
+  height: 80%;
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  right: 75%;
+  transform: translate(-55%, -30%);
+  width: 130px;
+  height: 130px;
+  z-index: 2;
+}
+
+/* STYLING OF THE FAQ ACCORDION */
+.faq{
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.main{
+  margin: 10px;
+}
+
+.qdiv{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+  color: hsl(240, 6%, 50%);
+}
+
+.btn{
+  background-color: transparent;
+  border: none;
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+.info{
+  margin-bottom: 15px;
+  font-size: smaller;
+  color: hsl(240, 6%, 50%);
+}
+
+hr{
+  height: 0.5px;
+  opacity: 0.2;
+  color: hsl(240, 5%, 91%);
+  background: hsl(240, 5%, 91%);
+}
+
+.title{
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.titleBold{
+  font-weight: 700;
+  color: hsl(237, 12%, 33%);
+}
+
+.qdiv:hover{
+  color: hsl(14, 88%, 65%);
+}
+
+@media screen and (max-width: 700px){
+  .container{
+    gap: 0px;
+    height: max-content;
+    width: 75vw;
+  }
+
+  .bg{
+    width:110%;
+    transform: translate(10%, 70%);
+  }
+  .box{
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 75%;
+    transform: translate(-55%, -30%);
+  }
+}
+
+/* STYLING FOR MOBILE DEVICES */
+@media screen and (max-width: 500px)  {
+  
+  .container{
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: visible;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: unset;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    height: max-content;
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0%;
+  }
+
+  .imgSection{
+    margin-bottom: 50px;
+  }
+
+  .bg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-80%);
+    /* width: 300px;
+    min-width: 70%; */
+    height: 250px;
+  }
+
+  .box{
+    position: absolute;
+    top: 23%;
+    left: 13%;
+    transform: unset;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+  }
+
+  .faq{
+    text-align: center;
+    font-size: 2rem;
+    margin: 35px 0 15px 0;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .box{
+    top: 30%;
+    left: 10%;
+    transform: unset;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .box{
+    top: 25%;
+    left: 10%;
+    transform: unset;
+  }
+
+  .container{
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0%;
+  }
+}
+@media screen and (max-width: 300px){
+  .container{
+    width: 95vw;
+  }
+  .main{
+    margin: 0;
+  }
+  .box{
+    top: 30%;
+    left: 10%;
+    transform: unset;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  body{
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .box{
+    top: 44%;
+    left: 5%;
+    transform: unset;
+  }
+}
+
+@media screen and (min-width: 1300px){
+  .box{
+    top: 44%;
+    left: 7%;
+    transform: unset;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  .box{
+    top: 44%;
+    left: 8%;
+    transform: unset;
+  }
 }
