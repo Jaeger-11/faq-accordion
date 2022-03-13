@@ -5,9 +5,9 @@ const Accordion = ({id, title, info}) => {
     const [showInfo, setShowInfo] = useState(false);
 
     return (
-        <article key={id} className = 'accordion'>
+        <article className = 'accordion'>
             <div className = 'qdiv'>
-                <p className={`title ${showInfo && 'titleBold'}`} onClick={() => setShowInfo(!showInfo)}>{title}</p>
+                <p key={id} className={`title ${showInfo && 'titleBold'}`} onClick={() => setShowInfo(!showInfo)}>{title}</p>
                 <button onClick={() => setShowInfo(!showInfo)} className='btn'>
                     {showInfo ? <FaChevronUp/> : <FaChevronDown/>}
                 </button>
