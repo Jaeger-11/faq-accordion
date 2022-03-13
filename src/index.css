@@ -8,7 +8,12 @@ body {
    font-size: 0.8em;
    font-family: Kumbh Sans;
 }
-  
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
 
 *{
   padding: 0;
@@ -20,10 +25,19 @@ code {
     monospace;
 }
 
+.app{
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  background: linear-gradient(to right, rgb(101, 101, 231), rgb(175, 103, 233))
+}
+
 .container{
   width: 70vw;
   min-height: max-content;
-  height: 400px;
+  height: max-content;
   min-height: max-content;
   background-color: white;
   margin: auto;
@@ -172,18 +186,14 @@ hr{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-80%);
-    /* width: 300px;
-    min-width: 70%; */
     height: 250px;
   }
 
   .box{
     position: absolute;
-    top: 23%;
+    top: 30%;
     left: 13%;
     transform: unset;
-    width: 100px;
-    height: 100px;
     z-index: 2;
   }
 
@@ -194,19 +204,19 @@ hr{
   }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 440px){
   .box{
-    top: 30%;
-    left: 10%;
+    top: 22%;
+    left: 8%;
     transform: unset;
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 395px){
   .box{
     top: 25%;
     left: 10%;
-    transform: unset;
+    transform: translate(-10%, -25%);
   }
 
   .container{
@@ -217,6 +227,23 @@ hr{
     background-position-y: 0%;
   }
 }
+
+@media screen and (max-width: 380px){
+  .box{
+    top: 30%;
+    left: 10%;
+    transform: translate(-10%, -30%);
+  }
+}
+
+@media screen and (max-width: 370px){
+  .box{
+    top: 30%;
+    left: 10%;
+    transform: translate(-10%, -30%);
+  }
+}
+
 @media screen and (max-width: 300px){
   .container{
     width: 95vw;
